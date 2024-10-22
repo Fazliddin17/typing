@@ -17,7 +17,7 @@ services:
     build: .
     restart: always
     ports:
-      - "8090:8093"
+      - "8095:8093"
     depends_on:
       - db
     environment:
