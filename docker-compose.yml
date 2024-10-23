@@ -9,8 +9,8 @@ services:
     volumes:
       - /var/lib/postgresql/data
     environment:
-      POSTGRES_DB: postgres
-      POSTGRES_USER: postgres
+      POSTGRES_DB: fff_db
+      POSTGRES_USER: fff_user
       POSTGRES_PASSWORD: root
   web:
     container_name: maker-bot-app
@@ -21,6 +21,6 @@ services:
     depends_on:
       - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://127.0.0.1:5432/postgres
-      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/fff_db
+      SPRING_DATASOURCE_USERNAME: fff_user
       SPRING_DATASOURCE_PASSWORD: root
